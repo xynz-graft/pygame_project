@@ -75,6 +75,8 @@ class Vehicle:
 
     def draw(self, screen):
         screen.blit(self.image, self.rect)
+        #hitbox
+        pygame.draw.rect(screen, (255, 0, 0), self.rect, 2)
 
 
 def create_vehicles(level):
@@ -83,5 +85,4 @@ def create_vehicles(level):
     for lane in ROAD_LANES:
         vehicles.append(Vehicle(lane, random.randint(-800, -400), level))
         vehicles.append(Vehicle(lane, random.randint(-1500, -900), level))
-
     return vehicles
