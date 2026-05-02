@@ -75,7 +75,8 @@ class Vehicle:
 
     def draw(self, screen):
         screen.blit(self.image, self.rect)
-
+        #hitbox
+        pygame.draw.rect(screen, (255, 0, 0), self.rect, 2)
 
 def create_vehicles(level):
     vehicles = []
